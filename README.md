@@ -30,61 +30,7 @@ A solução tem como objetivo **emitir alertas e prever entupimentos**, contribu
 ---
 
 ## 🚀 Como Rodar o Projeto
-Treinar o modelo
-bash
-Copiar
-Editar
-python train_model.py
-Isso irá gerar o arquivo modelo_bueiros.pkl automaticamente após o treino com dados simulados.
 
-3. Iniciar a API Flask
-bash
-Copiar
-Editar
-python app.py
-Você verá algo como:
-
-csharp
-Copiar
-Editar
-* Running on http://192.168.0.X:5000
-4. Rodar o ESP32 no Wokwi
-Acesse https://wokwi.com
-
-Crie um projeto e importe os arquivos da pasta wokwi_esp32_code/
-
-No código, altere a linha:
-
-cpp
-Copiar
-Editar
-const char* serverUrl = "http://192.168.0.X:5000/dados_bueiro";
-Rode o simulador — os dados começarão a aparecer no Flask 🎯
-
-5. Enviar manualmente do Webhook (opcional)
-Caso você tenha feito testes com Webhook.site:
-
-Copie o JSON completo recebido
-
-Cole dentro do script reenviar_para_flask.py
-
-Rode:
-
-bash
-Copiar
-Editar
-python reenviar_para_flask.py
-6. Verificar dados no banco
-bash
-Copiar
-Editar
-python verificar_banco.py
-Saída esperada:
-
-yaml
-Copiar
-Editar
-Total de leituras armazenadas: 12
 ### 📌 Requisitos
 
 - Python 3.9+
@@ -96,5 +42,49 @@ Total de leituras armazenadas: 12
 
 ```bash
 pip install flask joblib scikit-learn pandas
+```
+### 🧠 Treine o modelo
+Execute no terminal:
 
+python train_model.py
+
+Isso irá treinar um modelo de Machine Learning com base nas leituras armazenadas no banco e salvar o arquivo modelo_bueiros.pkl.
+
+🔥 Inicie a API Flask
+No terminal:
+
+python app.py
+
+A API Flask será iniciada em http://192.168.0.X:5000 e ficará aguardando dados do ESP32.
+
+⚙️ Teste com o ESP32 no Wokwi
+Acesse https://wokwi.com
+
+Importe os arquivos da pasta wokwi_esp32_code/
+
+No código, edite a variável serverUrl com seu IP local, por exemplo:
+
+const char* serverUrl = "http://192.168.0.3:5000/dados_bueiro";
+
+Rode a simulação. O ESP32 irá enviar os dados automaticamente para o Flask, que salvará no banco e exibirá os alertas.
+
+🧪 Ferramentas auxiliares
+reenviar_para_flask.py → reenvia uma leitura salva do Webhook.site para o Flask
+
+verificar_banco.py → exibe quantas leituras estão armazenadas
+
+geracao_de_dados.py → gera dados simulados para treinar o modelo
+
+✅ Checklist da FIAP
+Item exigido pela GS	Status
+📟 ESP32 funcionando (Wokwi)	✅
+📡 Envio de dados reais/simulados	✅
+🗃️ Banco de dados local (SQLite)	✅
+🤖 Modelo de Machine Learning	✅
+🔔 Lógica de alerta funcional	✅
+📋 Código comentado e bem organizado	✅
+📂 GitHub público	✅
+
+👨‍💻 Desenvolvedores
+Enrico Cunha Di Domenico
 
