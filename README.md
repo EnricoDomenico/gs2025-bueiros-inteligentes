@@ -1,4 +1,4 @@
-# 🌧️ Global Solution FIAP 2025 — Sistema Inteligente de Monitoramento de Enchentes
+# 🌧️ Global Solution FIAP 2025 — Sistema inteligente de monitoramento de enchentes
 
 Este projeto foi desenvolvido como parte da **Global Solution 2025.1** da FIAP, com foco em mitigar desastres naturais — neste caso, **enchentes causadas pelo entupimento de bueiros**. A solução une sensores físicos via **ESP32** com **Machine Learning em Python**, criando um sistema completo de alerta e predição em tempo real.
 
@@ -19,5 +19,5 @@ Detectar possíveis riscos de entupimento de bueiros em áreas urbanas, monitora
 
 ---
 
-## 🛠️ Estrutura do Projeto
+## 🛠️ Estrutura do projeto
 
