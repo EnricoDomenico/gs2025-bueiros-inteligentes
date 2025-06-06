@@ -29,28 +29,6 @@ A solução tem como objetivo **emitir alertas e prever entupimentos**, contribu
 
 ---
 
-## 🗂️ Estrutura do projeto
-ProjetoGs/
-├── wokwi_esp32_code/
-│ ├── bueiro_sensor.ino # Código principal do ESP32
-│ ├── sketch.ino # Alias ou cópia do principal
-│ ├── diagram.json # Diagrama de ligação dos pinos
-│ └── wokwi-project.txt # Metadados do projeto no Wokwi
-│
-├── app.py # API Flask que recebe e trata os dados
-├── bueiros_data.db # Banco de dados SQLite
-├── modelo_bueiros.pkl # Modelo treinado de Machine Learning
-│
-├── train_model.py # Script de treino do modelo
-├── gerar_dados.py # Gera leituras simuladas (com seed)
-├── reenviar_para_flask.py # Reenvia payload do webhook para API Flask
-├── verificar_banco.py # Conta entradas no banco SQLite
-├── teste.py # Código de testes pontuais
-└── desktop.ini / pycache/ # Arquivos de sistema (ignorar)
-
-
----
-
 ## 🚀 Como Rodar o Projeto
 
 ### 📌 Requisitos
