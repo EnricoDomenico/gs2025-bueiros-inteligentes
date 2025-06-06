@@ -50,14 +50,14 @@ python train_model.py
 
 Isso irá treinar um modelo de Machine Learning com base nas leituras armazenadas no banco e salvar o arquivo modelo_bueiros.pkl.
 
-🔥 Inicie a API Flask
+### 🔥 Inicie a API Flask
 No terminal:
 
 python app.py
 
 A API Flask será iniciada em http://192.168.0.X:5000 e ficará aguardando dados do ESP32.
 
-⚙️ Teste com o ESP32 no Wokwi
+### ⚙️ Teste com o ESP32 no Wokwi
 Acesse https://wokwi.com
 
 Importe os arquivos da pasta wokwi_esp32_code/
@@ -68,23 +68,18 @@ const char* serverUrl = "http://192.168.0.3:5000/dados_bueiro";
 
 Rode a simulação. O ESP32 irá enviar os dados automaticamente para o Flask, que salvará no banco e exibirá os alertas.
 
-🧪 Ferramentas auxiliares
+### 🧪 Ferramentas auxiliares
+
 reenviar_para_flask.py → reenvia uma leitura salva do Webhook.site para o Flask
 
 verificar_banco.py → exibe quantas leituras estão armazenadas
 
 geracao_de_dados.py → gera dados simulados para treinar o modelo
 
-✅ Checklist da FIAP
-Item exigido pela GS	Status
-📟 ESP32 funcionando (Wokwi)	✅
-📡 Envio de dados reais/simulados	✅
-🗃️ Banco de dados local (SQLite)	✅
-🤖 Modelo de Machine Learning	✅
-🔔 Lógica de alerta funcional	✅
-📋 Código comentado e bem organizado	✅
-📂 GitHub público	✅
-
-👨‍💻 Desenvolvedores
-Enrico Cunha Di Domenico
+### 👨‍💻 Desenvolvedores
+Enrico RM561352
+Larissa RM566418
+Daniel   RM564440
+Ednilton RM566069
+Davi RM566336
 
